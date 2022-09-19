@@ -81,3 +81,100 @@ SELECT Step, Union_Code, SetID
 FROM salary_range_by_job_classification
 WHERE Union_Code ='990' AND (SetID='SFMTA' OR SetID='COMMN');
 
+Module 2 Quiz
+
+2.
+Question 2
+You are doing an analysis on musicians that start with the letter “K”. Select the correct query that would retrieve only the artists whose name starts with this letter. 
+SELECT name
+FROM Artists
+WHERE name LIKE ‘K%’;
+
+
+Module 2 Coding Assignment
+
+1.
+Question 1
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the tracks that have a length of 5,000,000 milliseconds or more.
+SELECT TrackId, Milliseconds  
+FROM Tracks 
+WHERE Milliseconds >= 5000000;
+
+2.
+Question 2
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices whose total is between $5 and $15 dollars.
+SELECT COUNT (Total) 
+FROM Invoices
+WHERE total BETWEEN 5 AND 15;
+
+3.
+Question 3
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the customers from the following States: RJ, DF, AB, BC, CA, WA, NY.
+SELECT State, CustomerId, FirstName, LastName, COMPANY
+FROM Customers
+WHERE State IN ('RJ', 'DF', 'AB', 'BC', 'CA', 'WA', 'NY');
+
+4.
+Question 4
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices for customer 56 and 58 where the total was between $1.00 and $5.00.
+SELECT InvoiceID, CustomerID, Total, INVOICEDATE
+FROM Invoices
+WHERE CustomerId IN (56, 58) AND  total BETWEEN 1 AND 5;
+
+5.
+Question 5
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the tracks whose name starts with 'All'.
+SELECT  COUNT(Name)
+FROM TRACKS 
+WHERE name LIKE 'All%'
+
+6.
+Question 6
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the customer emails that start with "J" and are from gmail.com.
+SELECT CustomerId, FirstName, LastName, Email
+FROM Customers 
+WHERE Email LIKE ('J%') AND Email LIKE ('%gmail.com')
+
+7.
+Question 7
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find all the invoices from the billing city Brasília, Edmonton, and Vancouver and sort in descending order by invoice ID.
+SELECT InvoiceId, BillingCity, Total
+FROM Invoices 
+WHERE BillingCity IN ('Brasília', 'Edmonton', 'Vancouver')
+ORDER BY InvoiceId DESC;
+
+8.
+Question 8
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Show the number of orders placed by each customer (hint: this is found in the invoices table) and sort the result by the number of orders in descending order.
+SELECT CustomerId, COUNT(*) AS Orders
+FROM Invoices
+GROUP BY CustomerId
+ORDER BY Orders DESC
+
+9.
+Question 9
+All of the questions in this quiz refer to the open source Chinook Database. Please familiarize yourself with the ER diagram to familiarize yourself with the table and column names to write accurate queries and get the appropriate answers.
+
+Run Query: Find the albums with 12 or more tracks.
+SELECT AlbumId, Count(*) AS Ntracks
+FROM Tracks
+GROUP BY AlbumId
+HAVING COUNT (*) >= 12
+
+
