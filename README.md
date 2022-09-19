@@ -1,4 +1,6 @@
-# SQL-exercises-Module 1 Quiz
+# SQL-exercises-Module 
+
+1 Quiz
 
 1. Select the jobs below that may use SQL in their work (select all that apply).
 Data Scientist, QA Engineer, Backend Developer, DBA, Data Analyst
@@ -44,3 +46,25 @@ Column 1
 
 10. In order to retrieve data from a table with SQL, every SQL statement must contain?
 SELECT
+
+Module 1 Coding Questions
+
+1.
+Question 1
+For all of the questions in this quiz, we are using the Chinook database. All of the interactive code blocks have been setup to retrieve data only from this database.
+
+Retrieve all the records from the Employees table.
+Select *
+from Employees
+
+Question 2
+Retrieve the FirstName, LastName, Birthdate, AddrRetrieve all the columns from the Tracks table, but only return 20 rows.ess, City, and State from the Employees table.
+SELECT  FirstName, LastName, Birthdate, Address, City, State
+FROM Employees
+
+
+Question 3
+Retrieve all the columns from the Tracks table, but only return 20 rows.
+SELECT *
+FROM Tracks
+LIMIT 20
