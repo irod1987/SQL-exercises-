@@ -1,4 +1,4 @@
-# SQL-exercises-Module 
+# SQL-exercises- 
 
 1 Quiz
 
